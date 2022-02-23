@@ -1,0 +1,1 @@
+# spectral-lint-action
