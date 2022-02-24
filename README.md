@@ -2,17 +2,19 @@
 
 GitHub Action for validating OAS 3.0 or Swagger 2.0 JSON or YAML files using [Stoplight Spectral](https://stoplight.io/open-source/spectral/)
 
----
-
-## Usage
-
-### Input
-
-`file_path`: Input argument that references path of spec file on workspace
+[![CI](https://github.com/ahmetgeymen/spectral-lint-action/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/ahmetgeymen/spectral-lint-action/actions/workflows/main.yml)
 
 ---
 
-### Example
+## Input
+
+`file_path`: Argument references path of spec file on workspace
+
+---
+
+## Example
+
+You may copy & paste yaml below into your repo under path `.github/workflows/oas-spec-lint.yml`
 
 ```yaml
 name: OAS Linting Action
