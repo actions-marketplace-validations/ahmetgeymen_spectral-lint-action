@@ -8,7 +8,9 @@ GitHub Action for validating OAS 3.0 or Swagger 2.0 JSON or YAML files using [St
 
 ## Input
 
-`file_path`: Argument references path of spec file on workspace
+`file_path`: Argument references path of spec file on workspace. (Optional)
+
+In case of absecence, the file named `openapi-spec.yml` is used by default
 
 ---
 
