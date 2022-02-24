@@ -1,0 +1,15 @@
+# action.yml
+name: 'OAS3 & Swagger2 Lint Action'
+author: 'Ahmet Geymen'
+description: 'Runs Stoplight Spectral lint on your OAS file. Supports Swagger 2.0 or OpenAPI 3.0 format.'
+inputs:
+  file_path: # id of input
+    description: 'Path to OAS file for validation.'
+    required: false
+    default: 'openapi-spec.yml'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file_path }}
+

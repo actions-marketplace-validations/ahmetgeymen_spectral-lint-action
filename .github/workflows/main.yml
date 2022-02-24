@@ -1,0 +1,35 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+name: CI
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+jobs:
+  linting:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Check out repository
+        uses: actions/checkout@v2
+    
+      # Runs 'spectral lint' with local action
+      - name: Run action - spectral lint for Swagger 2.0
+        uses: ./
+        with:
+          # spec file is given as input 'file_path'.
+          file_path: examples/v2.0/petstore-expanded.yml
+
+      # Runs 'spectral lint' with local action
+      - name: Run action - spectral lint for OAS 3.0
+        uses: ./
+        with:
+          # spec file is given as input 'file_path'.
+          file_path: examples/v3.0/petstore-expanded.json
+
+      # Runs 'spectral lint' with local action
+      - name: Run action - spectral lint for OAS 3.0
+        uses: ./
+        # When 'file_path' is not provided default file 'openapi-spec.yml' is used.
