@@ -12,4 +12,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.file_path }}
-
+branding:
+  icon: 'fast-forward'  
+  color: 'green'
